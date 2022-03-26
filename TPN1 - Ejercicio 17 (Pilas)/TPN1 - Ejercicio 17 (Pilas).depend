@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1648224263 source:c:\users\equipo\desktop\carpeta drive\utn\1º cuatrimestre\programacion\1. unidad 1 introducción a la programación estructurada\tpn 1 - pilas\tpn1 - ejercicio 17 (pilas)\librerias\pila.c
+	"pila.h"
+
+1490112217 c:\users\equipo\desktop\carpeta drive\utn\1º cuatrimestre\programacion\1. unidad 1 introducción a la programación estructurada\tpn 1 - pilas\tpn1 - ejercicio 17 (pilas)\librerias\pila.h
+	<stdio.h>
+	<malloc.h>
+
+1648224263 source:g:\otros ordenadores\mi portátil\carpeta drive\utn\1º cuatrimestre\programacion\1. unidad 1 introducción a la programación estructurada\tpn 1 - pilas\tpn1 - ejercicio 17 (pilas)\librerias\pila.c
+	"pila.h"
+
+1490112217 g:\otros ordenadores\mi portátil\carpeta drive\utn\1º cuatrimestre\programacion\1. unidad 1 introducción a la programación estructurada\tpn 1 - pilas\tpn1 - ejercicio 17 (pilas)\librerias\pila.h
+	<stdio.h>
+	<malloc.h>
+
+1648327892 source:g:\otros ordenadores\mi portátil\carpeta drive\utn\1º cuatrimestre\programacion\1. unidad 1 introducción a la programación estructurada\tpn 1 - pilas\tpn1 - ejercicio 17 (pilas)\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<locale.h>
+	"Librerias/pila.h"
+

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1648212909 source:c:\users\equipo\desktop\carpeta drive\utn\1º cuatrimestre\programacion\1. unidad 1 introducción a la programación estructurada\tpn 1 - pilas\tpn1 - ejercicio 13 (pilas)\librerias\pila.c
+	"pila.h"
+
+1490112217 c:\users\equipo\desktop\carpeta drive\utn\1º cuatrimestre\programacion\1. unidad 1 introducción a la programación estructurada\tpn 1 - pilas\tpn1 - ejercicio 13 (pilas)\librerias\pila.h
+	<stdio.h>
+	<malloc.h>
+
