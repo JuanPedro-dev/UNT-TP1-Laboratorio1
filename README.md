@@ -1,30 +1,85 @@
 <h1 align="center"> UTN -> TP 1º Laboratorio 1</h1>
 <hr>
 
-# Trabajo Práctico N° 3: Funciones 
+# Trabajo Práctico N° 1: Pilas
   <br> 
-  ** NOTA: todas las funciones pedidas deben recibir por parámetro la/s pila/s cargadas con los datos. No se debe usar la función leer() dentro de la función, excepto en la función 1. **  <br> 
-  Realizar todas las funciones en un mismo proyecto, para ir probando su correcto funcionamiento deberá desarrollar una función main, donde cree las variables y pilas que necesite, e invoque a las funciones como corresponda en cada caso. <br>
-  Se sugiere crear un menú de opciones para que el usuario del sistema ejecute cada una de las funciones cuando lo desee. Asimismo, utilizar una estructura switch que ejecute cada opción elegida, contenido dentro de un do-while, que finalice cuando el usuario lo requiera.<br><br>
-  1. Hacer una función que permita ingresar varios elementos a una pila, tanto como quiera el usuario. <br>
-  2. Hacer una función que pase todos los elementos de una pila a otra. <br>
-  3. Hacer una función que pase todos los elementos de una pila a otra, pero conservando el orden. <br>
-  4. Hacer una función que encuentre el menor elemento de una pila y lo retorna. La misma debe eliminar ese dato de la pila.<br>
-  5. Hacer una función que pase los elementos de una pila a otra, de manera que se genere una nueva pila ordenada. Usar la función del ejercicio 4. (Ordenamiento por selección).<br>
-  6. Hacer una función que inserta en una pila ordenada un nuevo elemento, conservando el orden de ésta. <br>
-  7. Hacer una función que pase los elementos de una pila a otra, de manera que se genere una nueva pila ordenada. Usar la función del ejercicio 6.  (Ordenamiento por inserción). <br>
-  8. Hacer una función que sume y retorne los dos primeros elementos de una pila (tope y anterior), sin alterar su contenido.<br> 
-  9. Hacer una función que calcule el promedio de los elementos de una pila, para ello hacer también una función que calcule la suma, otra para la cuenta y otra que divida. En total son cuatro funciones, y la función que calcula el promedio invoca a las otras 3. <br>
-  10. Hacer una función que reciba una pila con números de un solo dígito (es responsabilidad de quien usa el programa) y que transforme esos dígitos en un número decimal. Por ejemplo, la pila: <br>
+  **Codificar los siguientes programas. En el caso de ser necesario se pueden utilizar pilas auxiliares. <br>
+Importante: no utilizar para la resolución de los ejercicios, variables que funcionen como contadores o acumuladores. Debe resolver la problemática aplicando pensamiento lógico. **  <br> <br>
 
-1
-4
-6
-7
-5<br>
+1. Cargar desde el teclado una pila DADA con 5 elementos. Pasar los tres primeros elementos a la pila AUX1 y los dos restantes a la pila AUX2, ambas pilas inicializadas en vacío. 
+2. Cargar desde el teclado la pila ORIGEN e inicializar en vacío la pila DESTINO. Pasar todos los elementos de la pila ORIGEN a la pila DESTINO. 
+3. Cargar desde teclado una pila DADA y pasar a la pila DISTINTOS todos aquellos elementos distintos al valor 8. 
+4. Cargar desde el teclado la pila ORIGEN e inicializar en vacío la pila DESTINO. Pasar los elementos de la pila ORIGEN a la pila DESTINO, pero dejándolos en el mismo orden. 
+5. Cargar desde el teclado la pila DADA. Invertir la pila de manera que DADA contenga los elementos cargados originalmente en ella, pero en orden inverso. 
+6. Pasar el primer elemento (tope) de la pila DADA a su última posición (base), dejando los restantes elementos en el mismo orden. 
+7. Pasar el último elemento (base) de la pila DADA a su primera posición (tope), dejando los restantes elementos en el mismo orden. 
+8. Repartir los elementos de la pila MAZO en las pilas JUGADOR1 y JUGADOR2 en forma alternativa. 
+9. Comparar la cantidad de elementos de las pilas A y B. Mostrar por pantalla el resultado. 
+10. Comparar las pilas A y B, evaluando si son completamente iguales (en cantidad de elementos, valores que contienen y posición de los mismos). Mostrar por pantalla el resultado. 
+11. Suponiendo la existencia de una pila MODELO que no esté vacía, eliminar de la pila DADA todos los elementos que sean iguales al tope de la pila MODELO. 
+12. Suponiendo la existencia de una pila MODELO (vacía o no), eliminar de la pila DADA todos los elementos que existan en MODELO. 
+13. Suponiendo la existencia de una pila LÍMITE, pasar los elementos de la pila DADA que sean mayores o iguales que el tope de LIMITE a la pila MAYORES, y los elementos que sean menores a la pila MENORES. 
+14. Determinar si la cantidad de elementos de la pila DADA es par. Si es par, pasar el elemento del tope de la pila AUX a la pila PAR y si es impar pasar el tope a la pila IMPAR. 
+15. Cual es la condición del siguiente ciclo? .Cuando finaliza el ciclo? (Pila1, Pila2, y Descarte son pilas): 
 
-Debe retornar el número: 14675<br>
+```javascript
+while (!pilavacia(&Pila1)) { 
+       apilar (&Pila2, desapilar(&Descarte))
+    } 
+``` 
+<br>
+16. Qué realiza el siguiente código escrito en lenguaje C (Pila1, Aux y Result son pilas):  <br>
 
-Ejercicios extra, con el fin de generar una experiencia de usuario diferente a la que otorga la librería se requiere desarrollar las siguientes funciones:
-    • Realizar una función que cargue la pila sin utilizar la función leer.
-    • Realizar una función que muestre la pila sin utilizar la función mostrar.
+
+```javascript
+while (!pilavacia(&Pila1)) { 
+   if (tope(&Pila1) == 5) {
+      apilar (&Aux, desapilar(&Pila1));
+      apilar (&Result, desapilar(&Aux));
+   }
+} 
+```
+
+17. Para el ejercicio “Cargar por teclado una pila ORIGEN y pasar a la pila DISTINTO todos aquellos elementos que preceden al valor 5 (elementos entre el tope y el valor 5). No se asegura que exista algún valor 5”, se realizo el siguiente programa:  <br>
+// este programa carga por teclado una pila Origen y pasa a la pila Destino todos aquellos elementos que preceden el valor 5 
+
+```javascript
+int main() { 
+   Pila Origen, Distinto;
+   inicpila(&Origen);
+   inicpila(&Distinto);
+   leer(&Origen);
+   if (!pilaVacia(&Origen)){ 
+      while (tope(&Origen) != 5) {
+         apilar (&Distinto, desapilar(&Origen));
+      } 
+   }
+}
+```
+a. .Resuelve el problema planteado? <br>
+b. .Cuales son los errores que encuentra? <br>
+c. Reescribir el código para que resuelva adecuadamente el problema planteado. <br>
+d. Indicar las componentes del programa.  <br>
+
+18. Dado el siguiente ciclo (Pila1, Pila2 y Descarte son pilas): 
+
+
+```javascript
+
+while ( (!pilaVacia(&Pila1)) && (!pilaVacia(&Pila2)) ) { 
+     apilar (&Descarte, desapilar(&Pila1));
+     apilar (&Descarte, desapilar(&Pila2))
+} 
+
+``` 
+a. .Cual es la condición del ciclo? Explique con sus palabras <br>
+b. .Cuales son los posibles estados de ambas pilas al finalizar el ciclo? 
+
+
+
+
+
+
+
+
+
